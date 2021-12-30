@@ -83,7 +83,7 @@ public class MaterialService {
     }
 
 
-    private List<MaterialDTO> obtenerPorareayTipo(String areaTematica,String tipoMaterial){
+    protected List<MaterialDTO> obtenerPorareayTipo(String areaTematica,String tipoMaterial){
         List<Material> materials = materialRepositorio.findByAreaTematicaAndTipoMaterial(areaTematica,tipoMaterial);
         return mapper.fromCollectionList(materials);
     }

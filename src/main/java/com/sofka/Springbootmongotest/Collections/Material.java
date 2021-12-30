@@ -19,6 +19,19 @@ public class Material {
     private String nombre;
     private String descripcion;
 
+    public Material() {
+    }
+
+    public Material(String id, boolean estado, LocalDate fechaPrestamos, TipoMaterial tipoMaterial, AreaTematica areaTematica, String nombre, String descripcion) {
+        this.id = id;
+        this.estado = estado;
+        this.fechaPrestamos = fechaPrestamos;
+        this.tipoMaterial = tipoMaterial;
+        this.areaTematica = areaTematica;
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+    }
+
     public String getId() {
         return id;
     }

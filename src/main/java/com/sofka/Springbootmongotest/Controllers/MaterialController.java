@@ -19,13 +19,13 @@ import java.util.List;
 public class MaterialController {
     @Autowired
     MaterialService materialService;
-
+    //listo
     @GetMapping("/{id}")
     public ResponseEntity<MaterialDTO> findbyId(@PathVariable("id") String id) {
         return new ResponseEntity(materialService.obtenerPorId(id), HttpStatus.OK);
     }
 
-
+    //listo
     @PutMapping("/modificar")
     public ResponseEntity<MaterialDTO> update(@RequestBody MaterialDTO materialDTO) {
         if (materialDTO.getId() != null) {
@@ -33,7 +33,7 @@ public class MaterialController {
         }
         return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
-
+    //listo
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable("id") String id) {
         try {
